@@ -1,0 +1,64 @@
+/*---Created by Tri Yoga Dimas Syahputra-----
+----NIM : 15210070--------------------------
+---From SK-8C-----------------------------*/
+
+-The rules of the folders-
+
+copy paste folder smarthome5 ke C:\xampp\htdocs\
+copy paste backend ke C:\xampp\htdocs\
+copy paste ip.txt ke C:\xampp\htdocs\
+
+-------------------------------------------------------------------------------------
+
+-The function of ip.txt file-
+ip.txt : change it to your local ip address (from LAN Connection/or Bridge Connection)
+secara default ip yang penulis gunakan adalah: IP Address : 192.168.43.242 Subnet Mask : 255.255.255.0
+DNS dapat diisi dengan DNS Google: primary - "8.8.8.8" dan secondary - "8.8.8.4"
+(note: tanpa tanda kutip)
+
+-------------------------------------------------------------------------------------
+
+-The rules of the database-
+Wajib..! You have to Create the database first..!!!
+
+note: user pass yang digunakan untuk login database adalah info default, yaitu:
+user: "root" pass: "" (note: pass kosong)
+
+Database name : security
+-The lists of the table on the database "security"
+1. "control"
+2. "gasdata"
+3. "snap"
+4. "tempdata"
+
+in the "control" table, ada 4 field!!!
+1. snap dengan type int(11)
+2. motion dengan type int(11)
+3. relay1 dengan type (11)
+4. relay2 dengan type (11)
+
+Warning!! Perhatikan!! insert terlebih dahulu nilai 0 atau 1
+pada field snap, motion, relay1, dan relay2 kemudian save nilai yang sudah di set.
+
+in the "gasdata" table, ada 8 field!!!
+1. "id" dengan type int(11) | Extra:AUTO_INCREMENT
+2. "lpg" dengan type int(11)
+3. "co" dengan type (11)
+4. "smoke dengan type (11)
+5. "datetime" dengan type datetime
+6. "date" dengan type date
+7. "time" dengan type time
+8. 'total" dengan type (11)
+
+in the "snap" table, ada 2 field!!!
+1. snap_link dengan type varchar(100) | collation:latin1_swedish_ci
+2. id dengan type int(11) Extra:AUTO_INCREMENT
+
+
+in the "temptdata" table, ada 6 field!!!
+1. suhu dengan type int(11)
+2. lembap dengan type int(11)
+3. datetime dengan type datetime
+4. time dengan type time
+5. id dengan type int(11) | Extra:AUTO_INCREMENT
+6. date dengan type date

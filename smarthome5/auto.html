@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>auto refresh</title>
+</head>
+<body>
+<div id="auto"></div>
+<script src="http://localhost/smarthome/datatables/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready( function(){
+		$('#auto').fadeOut('slow').load('http://localhost/smarthome/text.php');
+		refresh();
+	});
+
+	function refresh()
+	{
+		setTimeout ( function() {
+			$('#auto').fadeOut('slow').load('text.php').fadeIn('slow');
+		refresh();
+				}, 200);
+	}
+</script>
+</body>
+</html>
